@@ -2,3 +2,4 @@ Django>=1.8.5
 django-rest-swagger>=2.0.5
 djangorestframework>=3.4.6
 djangorestframework-jsonapi>=2.1.0
+MySQL-python>=1.2.5
