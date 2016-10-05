@@ -27,8 +27,8 @@ from .world import views
 
 router = routers.DefaultRouter()
 
-router.register(r'legacy_city', views.CityViewSet)
-router.register(r'legacy_country', views.CountryViewSet)
-router.register(r'legacy_countrylanguage', views.CountrylanguageViewSet)
-router.register(r'legacy_djangomigrations', views.DjangoMigrationsViewSet)
+router.register(r'city', views.CityViewSet)
+router.register(r'country', views.CountryViewSet)
+router.register(r'countrylanguage', views.CountrylanguageViewSet)
+
 urlpatterns = [url(r'^', include(router.urls)),url(r'^api-docs', views.schema_view),]

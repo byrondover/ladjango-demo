@@ -48,7 +48,7 @@ $ECHO "router = routers.DefaultRouter()\n" >> $urls
 
 egrep "^class " $models \
   | cut -d '(' -f 1 \
-  | awk '{print "router.register(r'\''legacy_" tolower($2) "'\'', views." $2 "ViewSet)"}' \
+  | awk '{print "router.register(r'\''" tolower($2) "'\'', views." $2 "ViewSet)"}' \
   >> $urls
 
 $ECHO "\nurlpatterns = [url(r'^', include(router.urls))]" >> $urls
