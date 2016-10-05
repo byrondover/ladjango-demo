@@ -2,21 +2,12 @@
 
 # Dependency.
 # echo must interpret newline backslashes (/n).
-
 ECHO="/usr/local/bin/gecho -e"
-
-$ECHO $1
-$ECHO python manage.py inspectdb l $1
 
 app_path=$(dirname "${1}")
 app_name=$(basename "${app_path}")
 project_path=$(dirname "${app_path}")
 
-$ECHO $app_path
-$ECHO $app_name
-$ECHO $project_path
-
-#exit 0
 
 models="${1}"
 serializers="${app_path}/serializers.py"
@@ -62,5 +53,4 @@ egrep "^class " $models \
 
 $ECHO "\nurlpatterns = [url(r'^', include(router.urls))]" >> $urls
 
-$ECHO $file
-$ECHO $path
+$ECHO "Done."
